@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Muncak</title>
+	<link rel="stylesheet" href="libs/animate/animate.min.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+	<style>
+		.alarm-box {
+			position: fixed;
+			z-index: 1000000;
+			display: block;
+			width: 100%;
+			background-color: green;
+		}
+
+		.alarm-box > p {
+			display: inline-block;
+			font-size: 1.4rem;
+			color: #000;
+			padding: 7px;
+			margin: 0;
+		}
+
+		.alarm-btn {
+			position: absolute;
+			top: calc(50% - 7px);
+			right: 7px;
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			cursor: pointer;
+		}
+
+		.alarm-btn::before {
+			position: absolute; 
+			top: 6px;
+			right: 0px;
+			z-index: 10000000;
+			display: block;
+			width: 100%;
+			height: 2px;
+			content: "";
+			background-color: #000;
+			transform: rotateZ(-45deg);
+		}
+
+		.alarm-btn::after {
+			position: absolute; 
+			top: 6px;
+			right: 0px;
+			z-index: 10000000;
+			display: block;
+			width: 100%;
+			height: 2px;
+			content: "";
+			background-color: #000;
+			transform: rotateZ(45deg);
+		}
+
+		.alarm-box_closed {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="alarm-box">
+		<p>This is a demo page</p>
+		<div class="alarm-btn"></div>
+	</div>
+	<header class="header">
+		<div class="header__wrapper">
+			<nav class="menu-line">
+				<h1 class="logo">Muncak</h1>
+				<div id="menu-toggle" onclick="menuOpen()">
+					<div id="hamburger">
+						<span></span>
+						<span></span>
+					</div>
+					<div id="cross">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<ul id="menu" class="menu menu-closed menu-up">
+					<li class="menu__item"><a class="menu__link menu__link_active" href="#">Home</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Go Hiking</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">About</a></li>
+					<li class="menu__item"><a class="menu__link" href="#">Login</a></li>
+				</ul>
+			</nav>
+			<div class="offer__wrapper">
+				<section class="offer">
+					<h2 class="offer__name">Let’s get the top of Mountain</h2>
+					<p class="offer__description">Here is the hiking information you need to decide if it is right for you, and to make it more interesting, enjoyable, and safe.</p>
+					<button class="offer__btn" type="button">Get Started</button>
+				</section>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="trail">
+			<div class="trail__wrapper">
+				<h3 class="trail__name name">We envision a world  where everyone has permanent access to a hiking trail</h3>
+				<div class="trail__items">
+					<article class="trail__item trail__item_left">
+						<h4>Advocate</h4>
+						<p>We work with Congress, Federal agencies, and partners on policy issues and legislation to ensure funding for trails, preservation of natural areas, and protection of the hiking experience.</p>
+					</article>
+					<article class="trail__item trail__item_right">
+						<h4>Volunteer</h4>
+						<p>Trails don't maintain themselves. Individuals of any age and experience level can become trail stewards. Give back to the trails you love, meet new people, and enjoy the experience!</p>
+					</article>
+					<article class="trail__item trail__item_left">
+						<h4>Explore</h4>
+						<p>Feel confident when you set out on your next trail adventure. Check out our free hiking resources like tips for hiking with families, gear checklists, finding the best trail for you.</p>
+					</article>
+				</div>
+				<button class="trail__btn" type="button">Learn More</button>
+			</div>
+		</section>
+		<section class="statistics">
+			<div class="statistics__wrapper">
+				<h3 class="statistics__name name">With the support of our members,  and partners, we've improved trail access for millions of people</h3>
+				<div class="statistics__items">
+					<div class="statistics__item statistics__item_1">We’ve Mobilized<br><span class="statistics__data">558,768</span><br>Trail Volunteers</div>
+					<div class="statistics__item statistics__item_2">We’ve Facilitated<br><span class="statistics__data">41,146</span><br>Miles of Trail Maintenance & Construction</div>
+					<div class="statistics__item statistics__item_3">Volunteers Have Contributed<br><span class="statistics__data">$108 Million</span><br>in Volunteer Labor</div>
+				</div>
+			</div>
+		</section>
+		<section class="news">
+			<div class="news__wrapper">
+				<h3 class="news__name name">Protecting Trails: Current News and Issues</h3>
+				<div class="news__items">
+					<article class="news__item news__item_1">
+						<img src="img/news/people.jpg" alt="img"
+						srcset="img/news/people@1,5x.jpg 1.5x,
+						img/news/people@2x.jpg 2x,
+						img/news/people@3x.jpg 3x">
+						<div class="news__text-wrapper">	
+							<h4>2,802 Miles of Trail to be Improved on International Trails Day</h4>
+							<p>On June 2, 2018, people across the worldwill come together to collectively improve 2,802 miles of trail—the distance across the world—during International  Trails Day. Muncak invites hikers, cyclists,…</p>
+							<a href="#">Read More</a>
+						</div>
+					</article>
+					<article class="news__item news__item_2">
+						<img src="img/news/bicycle.jpg" alt="img"
+						srcset="img/news/bicycle@1,5x.jpg 1.5x,
+						img/news/bicycle@2x.jpg 2x,
+						img/news/bicycle@3x.jpg 3x">
+						<div class="news__text-wrapper">	
+							<h4>Four Ways to Celebrate International Trails Day on a Bicycle</h4>
+							<p>There are many ways to celebrate the International Trails Day on June 2. It’s even possible to participate on a bicycle. And if you go on a bike overnight trip during International Trails Dayyou will simultaneously…</p>
+							<a href="#">Read More</a>
+						</div>
+					</article>
+					<article class="news__item news__item_3">
+						<img src="img/news/mountains.jpg" alt="img"
+						srcset="img/news/mountains@1,5x.jpg 1.5x,
+						img/news/mountains@2x.jpg 2x,
+						img/news/mountains@3x.jpg 3x">
+						<div class="news__text-wrapper">	
+							<h4>Millennials are the Future of our Trails</h4>
+							<p>The smell of fresh dew is a welcome scent, as the crunch of my boots melds with the sound of the birds singing their morning song. It’s early and I am wearing layers, but it won’t be long until they are peeled away to adapt to the summer…</p>
+							<a href="#">Read More</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section class="form">
+			<div class="form__wrapper">
+				<h3 class="form__name">Receive the latest updates on how to protect trails. Subscribe to the monthly edition of Paperless Trails.</h3>
+				<form class="form__body" action="#" method="post">
+					<input class="form__input" type="text" name="name" placeholder="Name" required><br>
+					<input class="form__input" type="email" name="email" placeholder="Email Address" required><br>
+					<input class="form__btn" type="submit" name="submit" value="Subscribe">
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<section class="footer__item footer__item_1">
+				<h4>Contact us</h4>
+				<ul>
+					<li class="footer__address">
+						<p>Muncak hiking society 8605 Second Ave. Silver Spring, MD 20910</p>
+					</li>
+					<li class="footer__contact">
+						<ul>
+							<li>
+								<a href="mailto:Info@muncak.org">Info@muncak.org</a>
+							</li>
+							<li>
+								<a href="tel:13015656704">1-301-565-6704 (Main)</a>
+							</li>
+							<li>
+								<a href="tel:18009728608">1-800-972-8608 (Toll-free)</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="network">
+							<li>
+								<a href="#"><img src="img/network/instagram.svg" alt="instagram"></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/network/facebook.svg" alt="facebook"></a>
+							</li>
+							<li>
+								<a href="#"><img src="img/network/twitter.svg" alt="twitter"></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__item footer__item_2">
+				<h4>About us</h4>
+				<ul>
+					<li>
+						<a href="#">Our Mission</a>
+					</li>
+					<li>
+						<a href="#">Our Team</a>
+					</li>
+					<li>
+						<a href="#">Corporate Sponsors</a>
+					</li>
+					<li>
+						<a href="#">Financials</a>
+					</li>
+					<li>
+						<a href="#">Media Center</a>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__item footer__item_3">
+				<h4>Our programs</h4>
+				<ul>
+					<li>
+						<a href="#">Hike The Hill</a>
+					</li>
+					<li>
+						<a href="#">Volunteer Vacations</a>
+					</li>
+					<li>
+						<a href="#">Alternative Break</a>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__item footer__item_4">
+				<h4>Support trails</h4>
+				<ul>
+					<li>
+						<a href="#">Donate</a>
+					</li>
+					<li>
+						<a href="#">Individual Membership</a>
+					</li>
+					<li>
+						<a href="#">Gift membership</a>
+					</li>
+					<li>
+						<a href="#">Hiker Store</a>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__item footer__item_5">
+				<h4>Hiking resources</h4>
+				<ul>
+					<li>
+						<a href="#">Hikes Near You</a>
+					</li>
+					<li>
+						<a href="#">Hiking 101</a>
+					</li>
+					<li>
+						<a href="#">Muncak Blog</a>
+					</li>
+					<li>
+						<a href="#">Hiking Organizations</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</footer>
+	<script src="libs/animate/jquery-2.1.3.min.js"></script>
+	<script src="libs/animate/waypoints.min.js"></script>
+	<script src="libs/animate/animate-css.js"></script>
+	<script src="js/scripts.min.js"></script>
+	<script>
+		$('.alarm-btn').on('click', function() {
+			$('.alarm-box').addClass('alarm-box_closed');
+		});
+	</script>
+</body>
+</html>

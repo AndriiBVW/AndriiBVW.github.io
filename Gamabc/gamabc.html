@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gama Fresh Sandwiches - виробник хлібобулочної продукції</title>
+  <link rel="icon" href="img/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="libs/animate.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .alarm-box {
+      position: fixed;
+      z-index: 1000000;
+      display: block;
+      width: 100%;
+      background-color: green;
+    }
+
+    .alarm-box > p {
+      display: inline-block;
+      font-size: 14px;
+      color: #000;
+      padding: 7px;
+      margin: 0;
+    }
+
+    .alarm-btn {
+      position: absolute;
+      top: calc(50% - 7px);
+      right: 7px;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+    }
+
+    .alarm-btn::before {
+      position: absolute; 
+      top: 6px;
+      right: 0px;
+      z-index: 10000000;
+      display: block;
+      width: 100%;
+      height: 2px;
+      content: "";
+      background-color: #000;
+      transform: rotateZ(-45deg);
+    }
+
+    .alarm-btn::after {
+      position: absolute; 
+      top: 6px;
+      right: 0px;
+      z-index: 10000000;
+      display: block;
+      width: 100%;
+      height: 2px;
+      content: "";
+      background-color: #000;
+      transform: rotateZ(45deg);
+    }
+
+    .alarm-box_closed {
+      display: none;
+    }
+  </style>   
+</head>
+<body>
+  <div class="alarm-box">
+    <p>This is a demo page</p>
+    <div class="alarm-btn"></div>
+  </div>
+  <div class="wrapper">
+    <div class="green-block"></div>
+    <div class="logo">
+      <img src="img/logo.png" alt="Gama">
+    </div>
+    <div class="toggle">
+      <span></span>
+    </div>
+    <nav class="menu menu_closed menu-anime">
+      <ul>
+        <li class="menu__item"><a href="#" class="menu__link menu__link_active">Головна</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Каталог</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Гарантії</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Про компанію</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Вакансії</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="tell">
+      <ul>
+        <li class="tell__item"><a href="tel:+380957667777" class="tell__link">+38 (095) 766-77-77</a></li>
+        <li class="tell__item"><a href="tel:+380963509625" class="tell__link">+38 (096) 350-96-25</a></li>
+        <li class="tell__item"><a href="tel:+380674690633" class="tell__link">+38 (067) 469-06-33</a></li>
+      </ul>
+    </div>
+    <div class="first-screen">
+      <p class="first-screen__text-1">Пропонуємо оптом і в роздріб від виробника</p>
+      <p class="first-screen__text-2">З огляду на основні купівельні переваги, ми пропонуємо здорову альтернативу традиційному фаст-фуду. Свіжі овочі, різноманіття м’ясних начинок, різні соуси, — ось те, що Ви отримуєте, замовивши продукцію у нас.</p>
+      <button type="button" class="first-screen__button">Замовити дзвінок</button>
+    </div>
+    <div class="our-products">
+      <h2>Наша продукція</h2>
+      <div class="our-products__wrapper">
+        <div class="our-products__item">
+          <div class="our-products__wrapper-image">
+            <img src="img/products/berliner.png" alt="img" class="our-products__image">
+          </div>
+          <p class="our-products__text">Берлінер</p>
+        </div>
+        <div class="our-products__item">
+          <div class="our-products__wrapper-image">
+            <img src="img/products/khachapuri.png" alt="img" class="our-products__image">
+          </div>
+          <p class="our-products__text">Хачапурі</p>
+        </div>
+        <div class="our-products__item">
+          <div class="our-products__wrapper-image">
+            <img src="img/products/pie.png" alt="img" class="our-products__image">
+          </div>
+          <p class="our-products__text">Пиріг</p>
+        </div>
+        <div class="our-products__item">
+          <div class="our-products__wrapper-image">
+            <img src="img/products/hamburger.png" alt="img" class="our-products__image">
+          </div>
+          <p class="our-products__text">Гамбургер</p>
+        </div>
+        <div class="our-products__item">
+          <div class="our-products__wrapper-image">
+            <img src="img/products/baguette.png" alt="img" class="our-products__image">
+          </div>
+          <p class="our-products__text">Багет</p>
+        </div>
+        <div class="our-products__item">
+          <div class="our-products__wrapper-image">
+            <img src="img/products/panini.png" alt="img" class="our-products__image">
+          </div>
+          <p class="our-products__text">Паніні</p>
+        </div>
+        <div class="our-products__item">
+          <div class="our-products__wrapper-image">
+            <img src="img/products/chiabatta.png" alt="img" class="our-products__image">
+          </div>
+          <p class="our-products__text">Чіабатта</p>
+        </div>
+        <div class="our-products__item">
+          <div class="our-products__wrapper-image">
+            <img src="img/products/patty.png" alt="img" class="our-products__image">
+          </div>
+          <p class="our-products__text">Пиріжки</p>
+        </div>
+      </div>
+      <button type="button" class="our-products__button">Вся продукція</button>
+    </div>
+    <div class="advantages">
+      <h2>Переваги нашої компанії</h2>
+      <div class="advantages__wrapper">
+        <div class="advantages__item">
+          <img src="img/advantages/truck.png" alt="img" class="advantages__image">
+          <p class="advantages__text">Доставка день у день</p>
+        </div>
+        <div class="advantages__item">
+          <img src="img/advantages/winter.png" alt="img" class="advantages__image">
+          <p class="advantages__text">Всі наші машини обладнані холодильними камерами</p>
+        </div>
+        <div class="advantages__item">
+          <img src="img/advantages/gift.png" alt="img" class="advantages__image">
+          <p class="advantages__text">При замовленні вище 400 грн ви отримуєте гриль або мікрохвильову піч</p>
+        </div>
+        <div class="advantages__item">
+          <img src="img/advantages/meeting.png" alt="img" class="advantages__image">
+          <p class="advantages__text">Система лояльності для постійних клієнтів</p>
+        </div>
+        <div class="advantages__item">
+          <img src="img/advantages/design.png" alt="img" class="advantages__image">
+          <p class="advantages__text">У Вас є можливість замовити у нас оформлення вітрини</p>
+        </div>
+        <div class="advantages__item">
+          <img src="img/advantages/good.png" alt="img" class="advantages__image">
+          <p class="advantages__text">Ми гарантуємо якість</p>
+        </div>
+      </div>
+      <button type="button" class="advantages__button">Замовити дзвінок</button>
+    </div>
+    <div class="about-us">
+      <div class="about-us__wrapper">
+        <h2>Про нас</h2>
+        <p>Пекарня «Gama Fresh Sandwiches» — один з найбільших вітчизняних виробників хлібобулочної продукції і вже понад 10 років успішно працює по всій Україні.</p>
+        <p>«Gama Fresh Sandwiches» — це вибір для тих, хто прагне отримати швидке обслуговування і поживний продукт, який підійде для всієї родини. Розвиваючись зараз, ми керуємося прагненням приносити задоволення і радість нашим клієнтам, пропонуючи їм свіжі і смачні вироби.</p>
+        <h3>Бургери оптом Київ</h3>
+        <p>Бургер є одним із найпопулярніших бутербродів у всьому світі. Про те, що жарена котлета з двома булоками стане настільки популярною не могли і поумати ще сто років тому. Проте з того часу багато чого змінилося. На сьогоднішній день бургери користуються настільки великою популярністью, що є в меню багатьох закладів. В нас можна придбати бургери оптом у Києві. Ми реалізуємо тільки якісну продукцію. Для приготування бургерів використовуємо лише свіжі інградієнти. Чим більші замовлення - тим більші скидки. Для постійних лієнтів існують акції, бонуси, постійно діють скидки. З нашою компанією ви отримуєте корисну їжу і здорово економите.</p>
+      </div>
+    </div>
+    <div class="map">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.9128800819544!2d30.324525608901926!3d49.77411293367448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d36f1df1b5295b%3A0x3e3e8805e0dde717!2z0KLQntCSIOKAnNCT0JDQnNCQINCR0KbigJ0!5e0!3m2!1suk!2sua!4v1564820363481!5m2!1suk!2sua" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+     <div id="form" class="form">
+      <form class="contact_form" action="contact-form.php" method="post">
+        <h3 class="form__name">Зв'язатися з нами</h3>
+        <p>
+          <input class="form__place" type="text"  name="name" placeholder="Ваше ім'я" required />
+        </p>
+        <p>
+          <input class="form__place" type="tel" name="tel" placeholder="Ваш номер телефону" required /><br>
+        </p>
+        <p>
+          <textarea class="form__place" name="message" cols="22" rows="4" placeholder="Ваше повідомлення" required ></textarea>
+        </p>
+        <input name="bezspama" type="text" style="display:none" value="" />
+        <p>
+          <button class="submit" type="submit">Відправити</button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="libs/jquery-3.4.1.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+  $('.alarm-btn').on('click', function() {
+    $('.alarm-box').addClass('alarm-box_closed');
+  });
+</script>
+</body>
+</html>

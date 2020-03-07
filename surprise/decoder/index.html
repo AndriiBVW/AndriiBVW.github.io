@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дешифратор</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#222222">
+    <link rel="icon" sizes="192x192" href="1.png">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Дешифратор</h1>
+        </div>
+        <form method="POST" action="#" class="main">
+            <label class="lbl" for="key">Числовой ключ</label>
+            <input class="blocks" id="key" type="number">
+
+            <label class="lbl" for="encryptedText">Зашифрованный текст</label>
+            <textarea class="blocks" id="encryptedText" rows="3"></textarea>
+
+            <label class="lbl" for="decryption">Расшифрованный текст</label>
+            <textarea class="blocks" id="decryption" rows="3" readonly></textarea>
+
+            <button class="blocks" id="btn" type="button">Скопировать</button>
+        </form>
+
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

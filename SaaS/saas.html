@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SaaS</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Rubik:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.min.css">
+	<style>
+		.alarm-box {
+			position: fixed;
+			z-index: 1000000;
+			display: block;
+			width: 100%;
+			background-color: green;
+		}
+
+		.alarm-box > p {
+			display: inline-block;
+			font-size: 1.4rem;
+			color: #000;
+			padding: 7px;
+			margin: 0;
+		}
+
+		.alarm-btn {
+			position: absolute;
+			top: calc(50% - 7px);
+			right: 7px;
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			cursor: pointer;
+		}
+
+		.alarm-btn::before {
+			position: absolute; 
+			top: 6px;
+			right: 0px;
+			z-index: 10000000;
+			display: block;
+			width: 100%;
+			height: 2px;
+			content: "";
+			background-color: #000;
+			transform: rotateZ(-45deg);
+		}
+
+		.alarm-btn::after {
+			position: absolute; 
+			top: 6px;
+			right: 0px;
+			z-index: 10000000;
+			display: block;
+			width: 100%;
+			height: 2px;
+			content: "";
+			background-color: #000;
+			transform: rotateZ(45deg);
+		}
+
+		.alarm-box_closed {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="alarm-box">
+		<p>This is a demo page</p>
+		<div class="alarm-btn"></div>
+	</div>
+	<header>
+		<div class="wrapper">
+			<div class="toggle">
+				<span></span>
+			</div>
+			<nav id="mainNav" class="nav nav_closed">
+				<ul>
+					<li><a href="#header" id="nav-toggle1">Головна</a></li>
+					<li><a href="#about-book" id="nav-toggle2">Про книгу</a></li>
+					<li><a href="#for-whom" id="nav-toggle3">Для кого</a></li>
+					<li><a href="#about-author" id="nav-toggle4">Про автора</a></li>
+					<li><a href="#section-form" id="nav-toggle5">Замовити</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div id="header" class="header"></div>
+		<section  id="first-screen" class="first-screen">
+			<div class="wrapper first-screen__box">
+				<div class="first-screen__content">
+					<h1>Прибутковий <span>SaaS</span> бізнес</h1>
+					<p>SaaS - це історія про концепцію майбутнього. Коротко вона звучить так: щоб отримати благо, ним достатньо користуватись, і не обов’язково володіти. Тож якщо ти вирішив банально заробити грошей або ж створити щось неймовірне - тобі тепер у SaaS-бізнес!</p>
+					<a href="#section-form">Почати зараз</a>
+				</div>
+				<div class="first-screen__img">
+					<img src="img/book.png" alt="book">
+				</div>
+			</div>
+		</section>
+		<section  id="about-book" class="about-book">
+			<div class="wrapper">
+				<h2>Про книгу</h2>
+				<p>Ця книга є результатом успішної роботи автора у галузі SaaS та збірником знань про те, що потрібно продуктовим онлайн компаніям для успіху в будь-якій ніші на ринку.</p>
+				<p>Тут ти знайдеш детальну інструкцію зі створення прибуткового онлайн продукту - від генерації ідеї і маркетингового дослідження, до розробки програмного забезпечення та менеджменту процесів.</p>
+				<p>Прочитавши книгу “Cтвори і запусти. Прибутковий SaaS бізнес” отримаєш розуміння функціонування SaaS індустрії та путівник, що допоможе уникнути багатьох помилок на шляху до успіху.</p>
+				<a href="#section-form">Замовити</a>
+			</div>
+		</section>
+		<section  id="for-whom" class="for-whom">
+			<div class="wrapper for-whom__box">
+				<div class="for-whom__img">
+					<img src="img/people.png" alt="img">
+				</div>
+				<div class="for-whom__content">
+					<h2>Для кого</h2>
+					<p>Ця книга написана для людей різного профілю, а саме:</p>
+					<ul>
+						<li>
+							<p>людям без технічної освіти, які хочуть запустити свою IT компанію;</p>
+						</li>
+						<li>
+							<p>розробникам, які хочуть отримати структуровану інформацію по запуску своїх продуктів;</p>
+						</li>
+						<li>
+							<p>власникам продуктових компаній для структурування своїх знань;</p>
+						</li>
+						<li>
+							<p>тим хто в цілому цікавиться просуванням компаній онлайн без революційної ідеї та інвесторів.</p>
+						</li>
+					</ul>
+				</div>		
+			</div>
+		</section>
+		<section id="about-author" class="about-author">
+			<div class="wrapper about-author__box">
+				<div class="about-author__content">
+					<h2>Про автора</h2>
+					<p>Катерина Миронюк - успішна онлайн бізнесвумен. З SaaS індустрією вона знайома з обох боків - як голова маркетингової агенції та як засновниця власної SaaS компанії.</p>
+					<p>Хоч інтерес до світу інтернет в неї виник ще змаличку, коли у віці 12-ти років Катерина запустила свій перший сайт, знання про функціонування інтернет бізнесу вона здобувала пізніше, у процесі онлайн просування міжнародних компаній.</p>
+					<p>Як результат роботи у цій сфері вона створила свій SaaS продукт без технічної освіти і самостійно пройшла шлях від пошуку ідеї для онлайн продукту до його запуску на ринок.</p>
+				</div>
+			</div>
+		</section>
+		<section id="section-form" class="section-form">
+			<div class="wrapper">
+				<h2>Зроби перший крок до власного SaaS бізнесу</h2>
+				<p>Вартість знань на шляху до успіху всього <b>370 грн</b>. Доставка новою поштою <b>безкоштовна</b>. Придбай книгу сьогодні!</p>
+				<form action="#" method="post">
+					<input type="text" placeholder="Ім’я та Прізвище" required>
+					<input type="tel" placeholder="Телефон" required>
+					<textarea rows="4" placeholder="Місто, та № відділення Нової пошти" required></textarea>
+					<input type="submit" value="Замовити">
+				</form>				
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="wrapper">
+			<p class="footer_copy">© AndriiBVW 2019</p>
+			<div>
+				<ul class="footer__nav">
+					<li><a href="#header">Головна</a></li>
+					<li><a href="#about-book">Про книгу</a></li>
+					<li><a href="#for-whom">Для кого</a></li>
+					<li><a href="#about-author">Про автора</a></li>
+					<li><a href="#section-form">Замовити</a></li>
+				</ul>
+			</div>
+			<div>
+				<ul class="footer_nerwork">
+					<li><a href="#"><img src="img/linkedin.png" alt="social"></a></li>
+					<li><a href="#"><img src="img/facebook.png" alt="social"></a></li>
+					<li><a href="#"><img src="img/instagram.png" alt="social"></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+	<script>
+		var alarmBox = document.querySelector('.alarm-box');
+		var alarmBtn = document.querySelector('.alarm-btn');
+
+		alarmBtn.onclick = function() {
+			alarmBox.classList.add("alarm-box_closed");
+		};
+	</script>
+</body>
+</html>

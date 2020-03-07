@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Part ON</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="libs/swipper/swiper.min.css">	
+	<link rel="stylesheet" href="css/styles.min.css">
+	<style>
+		.alarm-box {
+			position: fixed;
+			z-index: 1000000;
+			display: block;
+			width: 100%;
+			background-color: green;
+		}
+
+		.alarm-box > p {
+			display: inline-block;
+			font-size: 1.4rem;
+			color: #000;
+			padding: 7px;
+			margin: 0;
+		}
+
+		.alarm-btn {
+			position: absolute;
+			top: calc(50% - 7px);
+			right: 7px;
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			cursor: pointer;
+		}
+
+		.alarm-btn::before {
+			position: absolute; 
+			top: 6px;
+			right: 0px;
+			z-index: 10000000;
+			display: block;
+			width: 100%;
+			height: 2px;
+			content: "";
+			background-color: #000;
+			transform: rotateZ(-45deg);
+		}
+
+		.alarm-btn::after {
+			position: absolute; 
+			top: 6px;
+			right: 0px;
+			z-index: 10000000;
+			display: block;
+			width: 100%;
+			height: 2px;
+			content: "";
+			background-color: #000;
+			transform: rotateZ(45deg);
+		}
+
+		.alarm-box_closed {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="alarm-box">
+		<p>This is a demo page</p>
+		<div class="alarm-btn"></div>
+	</div>
+	<div class="wrapper">
+		<header>
+			<div class="header__wrapper">
+				<div class="logo">
+					<img src="img/logo_colored.svg" alt="logo">
+				</div>
+				<div class="main-panel">
+					<div class="panel-info">
+						<div class="phone">
+							<a href="tel:+370870055663"><span class="phone__icon"></span><span class="phone__number">+370 8 (700) 55663</span></a>
+						</div>
+						<div class="shopping-cart">
+							<a href="#"><span>0€</span></a>
+						</div>
+						<div class="sign-in">
+							<a href="#"><span>Sign in</span></a>
+						</div>
+						<div class="language">
+							<button type="button" class="language__active">lt</button>
+							<ul class="language__list language__list_closed">
+								<li><a href="index.html">lt</a></li>
+								<li><a href="#">en</a></li>
+								<li><a href="#">ru</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel-menu">
+						<div class="toggle">
+							<span></span>
+						</div>
+						<nav id="mainNav" class="nav nav_closed">
+							<ul>
+								<li><a href="#">Apie mus</a></li><!-- <li><a class="nav_active" href="#">Apie mus</a></li> -->
+								<li><a href="#">Privatiems</a></li>
+								<li><a href="#">Auto servisams</a></li>
+								<li><a href="#">Garantija</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>		
+			</div>
+		</header>
+		<main>
+			<section class="search-main">
+				<div class="seacrh-main__first-block">
+					<div class="seacrh-main__content">
+						<h1><span>ĮVESKITE DETALĖS KODĄ IR</span><br>GAUKITE GERIAUSIĄ KAINĄ!</h1>
+						<form action="#" method="post" class="search-main__form">
+							<input type="search" name="search" placeholder="Detales kodas" class="search-main__input">
+							<input type="submit" value="IEŠKOTI" class="search-main__submit">
+						</form>
+						<a href="#">Kaip sužinoti reikiamos dalies kodą?</a>
+					</div>
+				</div>
+				<div class="seacrh-second-block"></div>
+			</section>
+			<section class="trademarks">
+				<h2>Prekiniai ženklai, kurių detales tiekiame</h2>
+				<div class="swipper-box">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="trademarks__item">
+									<p>Auto & Moto parts</p>
+									<img src="img/BMW.png" alt="bmw">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="trademarks__item">
+									<p>Auto & Moto parts</p>
+									<img src="img/mercedes.png" alt="mercedes">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="trademarks__item">
+									<p>Auto & Moto parts</p>
+									<img src="img/vw.png" alt="vw">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="trademarks__item">
+									<p>Auto & Moto parts</p>
+									<img src="img/porsche.png" alt="porsche">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="trademarks__item">
+									<p>Auto & Moto parts</p>
+									<img src="img/BMW.png" alt="bmw">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="trademarks__item">
+									<p>Auto & Moto parts</p>
+									<img src="img/mercedes.png" alt="mercedes">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="trademarks__item">
+									<p>Auto & Moto parts</p>
+									<img src="img/vw.png" alt="vw">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="trademarks__item">
+									<p>Auto & Moto parts</p>
+									<img src="img/porsche.png" alt="porsche">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</section>
+			<section class="autoservis">
+				<div class="autoservis__wrapper">
+					<h2>Autoservis</h2>
+					<p>We assemble the parts in our authorized centres</p>
+					<button type="button">Contact us</button>
+				</div>
+			</section>
+			<section class="steps">
+				<div class="steps__wrapper">
+					<div class="steps__item steps__find">
+						<h3>SURASKITE</h3>
+						<img src="img/search.svg" alt="search">
+						<p>Pagal detalės kodą<br>suraskite tinkmą detalę</p>
+					</div>
+					<div class="steps__item steps__order">
+						<h3>UŽSAKYKITE</h3>
+						<img src="img/order.svg" alt="order">
+						<p>Atlikite užsakymą<br>Jums patogiu būdu</p>
+					</div>
+					<div class="steps__item steps__get">
+						<h3>GAUKITE</h3>
+						<img src="img/delivery.svg" alt="delivery">
+						<p>Pristatysime į Jūsų pasirinktą<br>vietą visoje Lietuvoje ir užsienyje</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer__wrapper">
+				<div class="footer__logo">
+					<img src="img/logo_white.svg" alt="logo">
+				</div>
+				<div class="footer__item">
+					<p>UAB "DALYS"<br>Įmonės k.<br>PVM mokėtojo k.<br>Geležinio VIlko g. 18 A</p>
+				</div>
+				<div class="footer__item">
+					<h4>INFORMACIJA:</h4>
+					<ul>
+						<li><a href="#">Privatiems</a></li>
+						<li><a href="#">Verslui</a></li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<h4>PAŽINKITE:</h4>
+					<ul>
+						<li><a href="#">Apie mus</a></li>
+						<li><a href="#">Partnerystė</a></li>
+						<li><a href="#">Garantijos</a></li>
+						<li><a href="#">Apie prekes</a></li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<h4>KONTAKTAI:</h4>
+					<ul>
+						<li><a href="tel:+37068991864">+37068991864</a></li>
+						<li><a href="mailto:info@kingparts.lt">info@kingparts.lt</a></li>
+						<li><p>Pagalba gyvai</p></li>
+						<li><p class="footer__live-chat">Live Chat</p></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="libs/swipper/swiper.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+	<script>
+		var alarmBox = document.querySelector('.alarm-box');
+		var alarmBtn = document.querySelector('.alarm-btn');
+
+		alarmBtn.onclick = function() {
+			alarmBox.classList.add("alarm-box_closed");
+		};
+	</script>
+</body>
+</html>
