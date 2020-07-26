@@ -49,23 +49,23 @@ body {
 }
 
 .portfolio ul li.active:nth-child(1) {
-   animation: fly-in 2.5s ease 0ms 1 normal forwards;
+   animation: fly-in 1.5s ease 0ms 1 normal forwards;
 }
 
 .portfolio ul li.active:nth-child(2) {
-   animation: fly-in 2.5s ease 200ms 1 normal forwards;
+   animation: fly-in 1.5s ease 200ms 1 normal forwards;
 }
 
 .portfolio ul li.active:nth-child(3) {
-   animation: fly-in 2.5s ease 450ms 1 normal forwards;
+   animation: fly-in 1.5s ease 450ms 1 normal forwards;
 }
 
 .portfolio ul li.active:nth-child(4) {
-   animation: fly-in 2.5s ease 800ms 1 normal forwards;
+   animation: fly-in 1.5s ease 800ms 1 normal forwards;
 }
 
 .portfolio ul li.active:nth-child(5) {
-   animation: fly-in 2.5s ease 1200ms 1 normal forwards;
+   animation: fly-in 1.5s ease 1200ms 1 normal forwards;
 }
 
 .portfolio ul li:last-child {

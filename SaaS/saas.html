@@ -1,73 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SaaS</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Rubik:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Rubik:400,700&display=swap&subset=cyrillic"
+		rel="stylesheet">
+	<link rel="stylesheet" href="../alert.css">
 	<link rel="stylesheet" href="css/styles.min.css">
-	<style>
-		.alarm-box {
-			position: fixed;
-			z-index: 1000000;
-			display: block;
-			width: 100%;
-			background-color: green;
-		}
-
-		.alarm-box > p {
-			display: inline-block;
-			font-size: 1.4rem;
-			color: #000;
-			padding: 7px;
-			margin: 0;
-		}
-
-		.alarm-btn {
-			position: absolute;
-			top: calc(50% - 7px);
-			right: 7px;
-			display: inline-block;
-			width: 14px;
-			height: 14px;
-			cursor: pointer;
-		}
-
-		.alarm-btn::before {
-			position: absolute; 
-			top: 6px;
-			right: 0px;
-			z-index: 10000000;
-			display: block;
-			width: 100%;
-			height: 2px;
-			content: "";
-			background-color: #000;
-			transform: rotateZ(-45deg);
-		}
-
-		.alarm-btn::after {
-			position: absolute; 
-			top: 6px;
-			right: 0px;
-			z-index: 10000000;
-			display: block;
-			width: 100%;
-			height: 2px;
-			content: "";
-			background-color: #000;
-			transform: rotateZ(45deg);
-		}
-
-		.alarm-box_closed {
-			display: none;
-		}
-	</style>
 </head>
+
 <body>
 	<div class="alarm-box">
-		<p>This is a demo page</p>
-		<div class="alarm-btn"></div>
+		<div class="alarm-box__wrap">
+			<div class="alert-box__img">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					x="0px" y="0px" viewBox="0 0 578 518.6" style="enable-background:new 0 0 578 518.6;" xml:space="preserve">
+					<g>
+						<g>
+							<path d="M568.8,416.6L347.9,34C335.6,12.7,313.6,0,289,0c-24.6,0-46.6,12.7-58.9,34L9.2,416.6c-12.3,21.3-12.3,46.7,0,68
+			c12.3,21.3,34.3,34,58.9,34h441.9c24.6,0,46.6-12.7,58.9-34C581.1,463.3,581.1,437.9,568.8,416.6z M510.9,451.9
+			c-5.5,9.5-15.2,15.1-26.2,15.1H93.3c-10.9,0-20.7-5.6-26.2-15.1s-5.5-20.8,0-30.2l195.7-339c5.5-9.5,15.2-15.1,26.2-15.1
+			c10.9,0,20.7,5.6,26.2,15.1l195.7,339C516.3,431.1,516.3,442.4,510.9,451.9z" />
+						</g>
+					</g>
+					<g>
+						<g>
+							<rect x="266" y="163.3" width="46" height="170" />
+						</g>
+					</g>
+					<g>
+						<g>
+							<path
+								d="M289,361.3c-14.6,0-26.5,11.9-26.5,26.5s11.9,26.5,26.5,26.5c14.6,0,26.5-11.9,26.5-26.5S303.6,361.3,289,361.3z" />
+						</g>
+					</g>
+				</svg>
+			</div>
+			<p class="alarm-box__text"></p>
+			<div class="alarm-btn"></div>
+		</div>
 	</div>
 	<header>
 		<div class="wrapper">
@@ -87,11 +60,13 @@
 	</header>
 	<main>
 		<div id="header" class="header"></div>
-		<section  id="first-screen" class="first-screen">
+		<section id="first-screen" class="first-screen">
 			<div class="wrapper first-screen__box">
 				<div class="first-screen__content">
 					<h1>Прибутковий <span>SaaS</span> бізнес</h1>
-					<p>SaaS - це історія про концепцію майбутнього. Коротко вона звучить так: щоб отримати благо, ним достатньо користуватись, і не обов’язково володіти. Тож якщо ти вирішив банально заробити грошей або ж створити щось неймовірне - тобі тепер у SaaS-бізнес!</p>
+					<p>SaaS - це історія про концепцію майбутнього. Коротко вона звучить так: щоб отримати благо, ним достатньо
+						користуватись, і не обов’язково володіти. Тож якщо ти вирішив банально заробити грошей або ж створити щось
+						неймовірне - тобі тепер у SaaS-бізнес!</p>
 					<a href="#section-form">Почати зараз</a>
 				</div>
 				<div class="first-screen__img">
@@ -99,16 +74,19 @@
 				</div>
 			</div>
 		</section>
-		<section  id="about-book" class="about-book">
+		<section id="about-book" class="about-book">
 			<div class="wrapper">
 				<h2>Про книгу</h2>
-				<p>Ця книга є результатом успішної роботи автора у галузі SaaS та збірником знань про те, що потрібно продуктовим онлайн компаніям для успіху в будь-якій ніші на ринку.</p>
-				<p>Тут ти знайдеш детальну інструкцію зі створення прибуткового онлайн продукту - від генерації ідеї і маркетингового дослідження, до розробки програмного забезпечення та менеджменту процесів.</p>
-				<p>Прочитавши книгу “Cтвори і запусти. Прибутковий SaaS бізнес” отримаєш розуміння функціонування SaaS індустрії та путівник, що допоможе уникнути багатьох помилок на шляху до успіху.</p>
+				<p>Ця книга є результатом успішної роботи автора у галузі SaaS та збірником знань про те, що потрібно
+					продуктовим онлайн компаніям для успіху в будь-якій ніші на ринку.</p>
+				<p>Тут ти знайдеш детальну інструкцію зі створення прибуткового онлайн продукту - від генерації ідеї і
+					маркетингового дослідження, до розробки програмного забезпечення та менеджменту процесів.</p>
+				<p>Прочитавши книгу “Cтвори і запусти. Прибутковий SaaS бізнес” отримаєш розуміння функціонування SaaS індустрії
+					та путівник, що допоможе уникнути багатьох помилок на шляху до успіху.</p>
 				<a href="#section-form">Замовити</a>
 			</div>
 		</section>
-		<section  id="for-whom" class="for-whom">
+		<section id="for-whom" class="for-whom">
 			<div class="wrapper for-whom__box">
 				<div class="for-whom__img">
 					<img src="img/people.png" alt="img">
@@ -130,29 +108,34 @@
 							<p>тим хто в цілому цікавиться просуванням компаній онлайн без революційної ідеї та інвесторів.</p>
 						</li>
 					</ul>
-				</div>		
+				</div>
 			</div>
 		</section>
 		<section id="about-author" class="about-author">
 			<div class="wrapper about-author__box">
 				<div class="about-author__content">
 					<h2>Про автора</h2>
-					<p>Катерина Миронюк - успішна онлайн бізнесвумен. З SaaS індустрією вона знайома з обох боків - як голова маркетингової агенції та як засновниця власної SaaS компанії.</p>
-					<p>Хоч інтерес до світу інтернет в неї виник ще змаличку, коли у віці 12-ти років Катерина запустила свій перший сайт, знання про функціонування інтернет бізнесу вона здобувала пізніше, у процесі онлайн просування міжнародних компаній.</p>
-					<p>Як результат роботи у цій сфері вона створила свій SaaS продукт без технічної освіти і самостійно пройшла шлях від пошуку ідеї для онлайн продукту до його запуску на ринок.</p>
+					<p>Катерина Миронюк - успішна онлайн бізнесвумен. З SaaS індустрією вона знайома з обох боків - як голова
+						маркетингової агенції та як засновниця власної SaaS компанії.</p>
+					<p>Хоч інтерес до світу інтернет в неї виник ще змаличку, коли у віці 12-ти років Катерина запустила свій
+						перший сайт, знання про функціонування інтернет бізнесу вона здобувала пізніше, у процесі онлайн просування
+						міжнародних компаній.</p>
+					<p>Як результат роботи у цій сфері вона створила свій SaaS продукт без технічної освіти і самостійно пройшла
+						шлях від пошуку ідеї для онлайн продукту до його запуску на ринок.</p>
 				</div>
 			</div>
 		</section>
 		<section id="section-form" class="section-form">
 			<div class="wrapper">
 				<h2>Зроби перший крок до власного SaaS бізнесу</h2>
-				<p>Вартість знань на шляху до успіху всього <b>370 грн</b>. Доставка новою поштою <b>безкоштовна</b>. Придбай книгу сьогодні!</p>
+				<p>Вартість знань на шляху до успіху всього <b>370 грн</b>. Доставка новою поштою <b>безкоштовна</b>. Придбай
+					книгу сьогодні!</p>
 				<form action="#" method="post">
 					<input type="text" placeholder="Ім’я та Прізвище" required>
 					<input type="tel" placeholder="Телефон" required>
 					<textarea rows="4" placeholder="Місто, та № відділення Нової пошти" required></textarea>
 					<input type="submit" value="Замовити">
-				</form>				
+				</form>
 			</div>
 		</section>
 	</main>
@@ -178,14 +161,8 @@
 		</div>
 	</footer>
 
+	<script src="../alert.js"></script>
 	<script src="js/scripts.min.js"></script>
-	<script>
-		var alarmBox = document.querySelector('.alarm-box');
-		var alarmBtn = document.querySelector('.alarm-btn');
-
-		alarmBtn.onclick = function() {
-			alarmBox.classList.add("alarm-box_closed");
-		};
-	</script>
 </body>
+
 </html>

@@ -40,9 +40,9 @@ $(document).ready(function(){
   $it = setInterval(value, $timer);
   setTimeout(() => {
     clearInterval($it);
-  }, $timer * 200);
+  }, $timer * 250);
   
   setTimeout(() => {
     $('.portfolio ul li').addClass('active');
-  }, 3000);
+  }, 2500);
 });

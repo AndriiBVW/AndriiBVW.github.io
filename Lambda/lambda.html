@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,69 +8,40 @@
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/animate/animate.min.css">
+	<link rel="stylesheet" href="../alert.css">
 	<link rel="stylesheet" href="css/styles.min.css">
-	<style>
-		.alarm-box {
-			position: fixed;
-			z-index: 1000000;
-			display: block;
-			width: 100%;
-			background-color: green;
-		}
-
-		.alarm-box > p {
-			display: inline-block;
-			font-size: 1.4rem;
-			color: #000;
-			padding: 7px;
-			margin: 0;
-		}
-
-		.alarm-btn {
-			position: absolute;
-			top: calc(50% - 7px);
-			right: 7px;
-			display: inline-block;
-			width: 14px;
-			height: 14px;
-			cursor: pointer;
-		}
-
-		.alarm-btn::before {
-			position: absolute; 
-			top: 6px;
-			right: 0px;
-			z-index: 10000000;
-			display: block;
-			width: 100%;
-			height: 2px;
-			content: "";
-			background-color: #000;
-			transform: rotateZ(-45deg);
-		}
-
-		.alarm-btn::after {
-			position: absolute; 
-			top: 6px;
-			right: 0px;
-			z-index: 10000000;
-			display: block;
-			width: 100%;
-			height: 2px;
-			content: "";
-			background-color: #000;
-			transform: rotateZ(45deg);
-		}
-
-		.alarm-box_closed {
-			display: none;
-		}
-	</style>
 </head>
+
 <body>
 	<div class="alarm-box">
-		<p>This is a demo page</p>
-		<div class="alarm-btn"></div>
+		<div class="alarm-box__wrap">
+			<div class="alert-box__img">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					x="0px" y="0px" viewBox="0 0 578 518.6" style="enable-background:new 0 0 578 518.6;" xml:space="preserve">
+					<g>
+						<g>
+							<path d="M568.8,416.6L347.9,34C335.6,12.7,313.6,0,289,0c-24.6,0-46.6,12.7-58.9,34L9.2,416.6c-12.3,21.3-12.3,46.7,0,68
+			c12.3,21.3,34.3,34,58.9,34h441.9c24.6,0,46.6-12.7,58.9-34C581.1,463.3,581.1,437.9,568.8,416.6z M510.9,451.9
+			c-5.5,9.5-15.2,15.1-26.2,15.1H93.3c-10.9,0-20.7-5.6-26.2-15.1s-5.5-20.8,0-30.2l195.7-339c5.5-9.5,15.2-15.1,26.2-15.1
+			c10.9,0,20.7,5.6,26.2,15.1l195.7,339C516.3,431.1,516.3,442.4,510.9,451.9z" />
+						</g>
+					</g>
+					<g>
+						<g>
+							<rect x="266" y="163.3" width="46" height="170" />
+						</g>
+					</g>
+					<g>
+						<g>
+							<path
+								d="M289,361.3c-14.6,0-26.5,11.9-26.5,26.5s11.9,26.5,26.5,26.5c14.6,0,26.5-11.9,26.5-26.5S303.6,361.3,289,361.3z" />
+						</g>
+					</g>
+				</svg>
+			</div>
+			<p class="alarm-box__text"></p>
+			<div class="alarm-btn"></div>
+		</div>
 	</div>
 	<div class="wrapper">
 		<header class="header">
@@ -123,19 +95,19 @@
 						<div class="col-md-6">
 							<div class="about__wrapper">
 								<h2 class="section__name section__name_orange">Just the right food</h2>
-								<p class="about__text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+								<p class="about__text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps
+									our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,
+									muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
 								<img srcset="img/about/cook@1,25x.png 1.25x,
 								img/about/cook@1,5x.png 1.5x,
-								img/about/cook@2x.png 2x"
-								src="img/about/cook.png" alt="img" class="about__img-cook">
+								img/about/cook@2x.png 2x" src="img/about/cook.png" alt="img" class="about__img-cook">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="about__wrapper about__wrapper-img">
 								<img srcset="img/about/dish@1,25x.png 1.25x, 
 								img/about/dish@1,5x.png 1.5x,
-								img/about/dish@2x.png 2x"
-								src="img/about/dish.png" alt="img" class="about__img-dish">
+								img/about/dish@2x.png 2x" src="img/about/dish.png" alt="img" class="about__img-dish">
 							</div>
 						</div>
 					</div>
@@ -147,19 +119,18 @@
 						<div class="col-xl-6 offset-xl-6 col-sm-12">
 							<div class="ingredients__wrapper">
 								<h2 class="section__name section__name_white">Fine ingredients</h2>
-								<p class="ingredients__text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+								<p class="ingredients__text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what
+									keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda
+									cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
 								<img srcset="img/ingredients/image-3@1,25x.jpg 1.25x,
 								img/ingredients/image-3@1,25x.jpg 1.5x,
-								img/ingredients/image-3@1,25x.jpg 2x"
-								src="img/ingredients/image-3.jpg" alt="img" class="ingredients__img">
+								img/ingredients/image-3@1,25x.jpg 2x" src="img/ingredients/image-3.jpg" alt="img" class="ingredients__img">
 								<img srcset="img/ingredients/image-2@1,25x.jpg 1.25x,
 								img/ingredients/image-2@1,25x.jpg 1.5x,
-								img/ingredients/image-2@1,25x.jpg 2x"
-								src="img/ingredients/image-2.jpg" alt="img" class="ingredients__img">
+								img/ingredients/image-2@1,25x.jpg 2x" src="img/ingredients/image-2.jpg" alt="img" class="ingredients__img">
 								<img srcset="img/ingredients/image@1,25x.jpg 1.25x,
 								img/ingredients/image@1,25x.jpg 1.5x,
-								img/ingredients/image@1,25x.jpg 2x"
-								src="img/ingredients/image.jpg" alt="img" class="ingredients__img">
+								img/ingredients/image@1,25x.jpg 2x" src="img/ingredients/image.jpg" alt="img" class="ingredients__img">
 							</div>
 						</div>
 					</div>
@@ -249,7 +220,10 @@
 						<div class="col-lg-8 col-12 offset-lg-2">
 							<div class="reviews__wrapper">
 								<h2 class="section__name section__name_white">Guest Reviews</h2>
-								<p class="reviews__text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!<br><span>- food inc, New York</span></p>
+								<p class="reviews__text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps
+									our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,
+									muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!<br><span>- food
+										inc, New York</span></p>
 							</div>
 						</div>
 					</div>
@@ -261,21 +235,21 @@
 						<div class="col-xl-3 d-none d-xl-block">
 							<img srcset="img/reservations/image-2@1,25x.jpg 1.25x,
 							img/reservations/image-2@1,5x.jpg 1.5x,
-							img/reservations/image-2@2x.jpg 2x"
-							src="img/reservations/image-2.jpg" alt="img" class="reservations__img-cook">
+							img/reservations/image-2@2x.jpg 2x" src="img/reservations/image-2.jpg" alt="img" class="reservations__img-cook">
 						</div>
 						<div class="col-xl-3 d-none d-xl-block">
 							<img srcset="img/reservations/image@1,25x.jpg 1.25x,
 							img/reservations/image@1,5x.jpg 1.5x,
-							img/reservations/image@2x.jpg 2x"
-							src="img/reservations/image.jpg" alt="img" class="reservations__img-cook">
+							img/reservations/image@2x.jpg 2x" src="img/reservations/image.jpg" alt="img" class="reservations__img-cook">
 						</div>
 						<div class="col-xl-6 offset-xl-0 col-lg-8 offset-lg-2 col-sm-12">
 							<div class="reservations__wrapper">
 								<h2 class="section__name section__name_orange">Guest Reviews</h2>
 								<div class="reservations__text">
-									<p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.</p>
-									<p>Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
+									<p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers
+										coming back for more. Perfect materials and freshly baked food.</p>
+									<p>Delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and
+										check us out! Perfect materials and freshly baked food.</p>
 								</div>
 								<form class="form" action="#" method="post">
 									<div class="form__line">
@@ -295,8 +269,8 @@
 										</label>
 										<label>
 											Party number<br>
-											<select class="form__input"  name="number">
-												<option hidden disabled selected value> --  -- </option>
+											<select class="form__input" name="number">
+												<option hidden disabled selected value> -- -- </option>
 												<option value="2">2</option>
 												<option value="3">3</option>
 												<option value="4">4</option>
@@ -323,7 +297,9 @@
 					<div class="col-md-4 col-sm-12">
 						<div class="footer__item">
 							<h3>About Us</h3>
-							<p>Lambda's new and expanded Chelsea location represents a truly authentic <strong>Greek</strong> patisserie, featuring breakfasts of fresh croissants and steaming bowls of café. Lamda the best restaurant in town</p>
+							<p>Lambda's new and expanded Chelsea location represents a truly authentic <strong>Greek</strong>
+								patisserie, featuring breakfasts of fresh croissants and steaming bowls of café. Lamda the best
+								restaurant in town</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-12">
@@ -356,12 +332,8 @@
 
 	<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
+	<script src="../alert.js"></script>
 	<script src="js/scripts.min.js"></script>
-
-	<script>
-		$('.alarm-btn').on('click', function() {
-			$('.alarm-box').addClass('alarm-box_closed');
-		});
-	</script>
 </body>
+
 </html>

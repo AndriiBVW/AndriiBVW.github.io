@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,69 +9,41 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="libs/animate.min.css">
+  <link rel="stylesheet" href="../alert.css">
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .alarm-box {
-      position: fixed;
-      z-index: 1000000;
-      display: block;
-      width: 100%;
-      background-color: green;
-    }
 
-    .alarm-box > p {
-      display: inline-block;
-      font-size: 14px;
-      color: #000;
-      padding: 7px;
-      margin: 0;
-    }
-
-    .alarm-btn {
-      position: absolute;
-      top: calc(50% - 7px);
-      right: 7px;
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      cursor: pointer;
-    }
-
-    .alarm-btn::before {
-      position: absolute; 
-      top: 6px;
-      right: 0px;
-      z-index: 10000000;
-      display: block;
-      width: 100%;
-      height: 2px;
-      content: "";
-      background-color: #000;
-      transform: rotateZ(-45deg);
-    }
-
-    .alarm-btn::after {
-      position: absolute; 
-      top: 6px;
-      right: 0px;
-      z-index: 10000000;
-      display: block;
-      width: 100%;
-      height: 2px;
-      content: "";
-      background-color: #000;
-      transform: rotateZ(45deg);
-    }
-
-    .alarm-box_closed {
-      display: none;
-    }
-  </style>   
 </head>
+
 <body>
   <div class="alarm-box">
-    <p>This is a demo page</p>
-    <div class="alarm-btn"></div>
+    <div class="alarm-box__wrap">
+      <div class="alert-box__img">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 578 518.6" style="enable-background:new 0 0 578 518.6;" xml:space="preserve">
+          <g>
+            <g>
+              <path d="M568.8,416.6L347.9,34C335.6,12.7,313.6,0,289,0c-24.6,0-46.6,12.7-58.9,34L9.2,416.6c-12.3,21.3-12.3,46.7,0,68
+			c12.3,21.3,34.3,34,58.9,34h441.9c24.6,0,46.6-12.7,58.9-34C581.1,463.3,581.1,437.9,568.8,416.6z M510.9,451.9
+			c-5.5,9.5-15.2,15.1-26.2,15.1H93.3c-10.9,0-20.7-5.6-26.2-15.1s-5.5-20.8,0-30.2l195.7-339c5.5-9.5,15.2-15.1,26.2-15.1
+			c10.9,0,20.7,5.6,26.2,15.1l195.7,339C516.3,431.1,516.3,442.4,510.9,451.9z" />
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="266" y="163.3" width="46" height="170" />
+            </g>
+          </g>
+          <g>
+            <g>
+              <path
+                d="M289,361.3c-14.6,0-26.5,11.9-26.5,26.5s11.9,26.5,26.5,26.5c14.6,0,26.5-11.9,26.5-26.5S303.6,361.3,289,361.3z" />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <p class="alarm-box__text"></p>
+      <div class="alarm-btn"></div>
+    </div>
   </div>
   <div class="wrapper">
     <div class="green-block"></div>
@@ -99,7 +72,9 @@
     </div>
     <div class="first-screen">
       <p class="first-screen__text-1">Пропонуємо оптом і в роздріб від виробника</p>
-      <p class="first-screen__text-2">З огляду на основні купівельні переваги, ми пропонуємо здорову альтернативу традиційному фаст-фуду. Свіжі овочі, різноманіття м’ясних начинок, різні соуси, — ось те, що Ви отримуєте, замовивши продукцію у нас.</p>
+      <p class="first-screen__text-2">З огляду на основні купівельні переваги, ми пропонуємо здорову альтернативу
+        традиційному фаст-фуду. Свіжі овочі, різноманіття м’ясних начинок, різні соуси, — ось те, що Ви отримуєте,
+        замовивши продукцію у нас.</p>
       <button type="button" class="first-screen__button">Замовити дзвінок</button>
     </div>
     <div class="our-products">
@@ -189,41 +164,50 @@
     <div class="about-us">
       <div class="about-us__wrapper">
         <h2>Про нас</h2>
-        <p>Пекарня «Gama Fresh Sandwiches» — один з найбільших вітчизняних виробників хлібобулочної продукції і вже понад 10 років успішно працює по всій Україні.</p>
-        <p>«Gama Fresh Sandwiches» — це вибір для тих, хто прагне отримати швидке обслуговування і поживний продукт, який підійде для всієї родини. Розвиваючись зараз, ми керуємося прагненням приносити задоволення і радість нашим клієнтам, пропонуючи їм свіжі і смачні вироби.</p>
+        <p>Пекарня «Gama Fresh Sandwiches» — один з найбільших вітчизняних виробників хлібобулочної продукції і вже
+          понад 10 років успішно працює по всій Україні.</p>
+        <p>«Gama Fresh Sandwiches» — це вибір для тих, хто прагне отримати швидке обслуговування і поживний продукт,
+          який підійде для всієї родини. Розвиваючись зараз, ми керуємося прагненням приносити задоволення і радість
+          нашим клієнтам, пропонуючи їм свіжі і смачні вироби.</p>
         <h3>Бургери оптом Київ</h3>
-        <p>Бургер є одним із найпопулярніших бутербродів у всьому світі. Про те, що жарена котлета з двома булоками стане настільки популярною не могли і поумати ще сто років тому. Проте з того часу багато чого змінилося. На сьогоднішній день бургери користуються настільки великою популярністью, що є в меню багатьох закладів. В нас можна придбати бургери оптом у Києві. Ми реалізуємо тільки якісну продукцію. Для приготування бургерів використовуємо лише свіжі інградієнти. Чим більші замовлення - тим більші скидки. Для постійних лієнтів існують акції, бонуси, постійно діють скидки. З нашою компанією ви отримуєте корисну їжу і здорово економите.</p>
+        <p>Бургер є одним із найпопулярніших бутербродів у всьому світі. Про те, що жарена котлета з двома булоками
+          стане настільки популярною не могли і поумати ще сто років тому. Проте з того часу багато чого змінилося. На
+          сьогоднішній день бургери користуються настільки великою популярністью, що є в меню багатьох закладів. В нас
+          можна придбати бургери оптом у Києві. Ми реалізуємо тільки якісну продукцію. Для приготування бургерів
+          використовуємо лише свіжі інградієнти. Чим більші замовлення - тим більші скидки. Для постійних лієнтів
+          існують акції, бонуси, постійно діють скидки. З нашою компанією ви отримуєте корисну їжу і здорово економите.
+        </p>
       </div>
     </div>
     <div class="map">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.9128800819544!2d30.324525608901926!3d49.77411293367448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d36f1df1b5295b%3A0x3e3e8805e0dde717!2z0KLQntCSIOKAnNCT0JDQnNCQINCR0KbigJ0!5e0!3m2!1suk!2sua!4v1564820363481!5m2!1suk!2sua" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-     <div id="form" class="form">
-      <form class="contact_form" action="contact-form.php" method="post">
-        <h3 class="form__name">Зв'язатися з нами</h3>
-        <p>
-          <input class="form__place" type="text"  name="name" placeholder="Ваше ім'я" required />
-        </p>
-        <p>
-          <input class="form__place" type="tel" name="tel" placeholder="Ваш номер телефону" required /><br>
-        </p>
-        <p>
-          <textarea class="form__place" name="message" cols="22" rows="4" placeholder="Ваше повідомлення" required ></textarea>
-        </p>
-        <input name="bezspama" type="text" style="display:none" value="" />
-        <p>
-          <button class="submit" type="submit">Відправити</button>
-        </p>
-      </form>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.9128800819544!2d30.324525608901926!3d49.77411293367448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d36f1df1b5295b%3A0x3e3e8805e0dde717!2z0KLQntCSIOKAnNCT0JDQnNCQINCR0KbigJ0!5e0!3m2!1suk!2sua!4v1564820363481!5m2!1suk!2sua"
+        width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div id="form" class="form">
+        <form class="contact_form" action="contact-form.php" method="post">
+          <h3 class="form__name">Зв'язатися з нами</h3>
+          <p>
+            <input class="form__place" type="text" name="name" placeholder="Ваше ім'я" required />
+          </p>
+          <p>
+            <input class="form__place" type="tel" name="tel" placeholder="Ваш номер телефону" required /><br>
+          </p>
+          <p>
+            <textarea class="form__place" name="message" cols="22" rows="4" placeholder="Ваше повідомлення"
+              required></textarea>
+          </p>
+          <input name="bezspama" type="text" style="display:none" value="" />
+          <p>
+            <button class="submit" type="submit">Відправити</button>
+          </p>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 
-<script src="libs/jquery-3.4.1.min.js"></script>
-<script src="js/scripts.js"></script>
-<script>
-  $('.alarm-btn').on('click', function() {
-    $('.alarm-box').addClass('alarm-box_closed');
-  });
-</script>
+  <script src="libs/jquery-3.4.1.min.js"></script>
+  <script src="../alert.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
+
 </html>
