@@ -68,6 +68,10 @@ body {
    animation: fly-in 1.5s ease 1200ms 1 normal forwards;
 }
 
+.portfolio ul li.active:nth-child(6) {
+  animation: fly-in 1.5s ease 1650ms 1 normal forwards;
+}
+
 .portfolio ul li:last-child {
   margin-right: 0;
 }
