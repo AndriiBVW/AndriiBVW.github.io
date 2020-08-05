@@ -15,10 +15,10 @@
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #222;
+  background-color: #333;
   border: 1px solid #fff;
   border-radius: 2px;
-  box-shadow: 0px 2px 6px rgba(20, 20, 20, 0.5);
+  box-shadow: 0px 2px 6px rgba(20, 20, 20, 0.65);
 }
 
 .alert-box__img {
@@ -33,7 +33,7 @@
 
 .alert-box__img svg {
   width: 26px;
-  fill: #222;
+  fill: #333;
 }
 
 .alarm-box p {
