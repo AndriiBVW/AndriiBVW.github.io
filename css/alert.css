@@ -1,6 +1,6 @@
 .alarm-box {
   position: fixed;
-  z-index: 1000000;
+  z-index: 1000000000;
   display: none;
   width: 100%;
   padding: 15px;
