@@ -989,6 +989,7 @@ h1 {
   background-image: url(../img/use/1.svg)
 }
 
+
 .use-section__item:first-child:before {
   right: -255px
 }
