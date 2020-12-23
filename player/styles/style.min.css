@@ -655,7 +655,7 @@ input[type="range"]:focus::-ms-fill-upper {
   display: flex;
 }
 .red-text {
-  color: #f51e38;
+  color: #7738dc;
 }
 
 .video-volume_icon {
@@ -671,5 +671,15 @@ input.video-volume_range {
 .video-fullscreen {
   cursor: pointer;
   margin-right: 20px;
+}
+
+.radio-volume_icon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input.radio-volume_range {
+  max-width: 150px;
+  margin-right: 40px;
 }
 /*# sourceMappingURL=style.min.css.map */
