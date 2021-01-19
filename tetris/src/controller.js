@@ -70,8 +70,12 @@ export default class Controller {
 
   handleKeyDown(event) {
     const state = this.game.getState();
+    console.log(event.code);
 
     switch (event.code) {
+      case "ControlLeft":
+        this.game.score += 5000;
+        break;
       case "Enter":
         if (state.isGameOver) {
           this.reset();
