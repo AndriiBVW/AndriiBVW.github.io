@@ -86,6 +86,8 @@ export default class Controller {
         this.updateView();
         break;
       case "ArrowUp":
+        event.preventDefault();
+
         this.game.rotatePiece();
         this.updateView();
         break;
@@ -94,6 +96,8 @@ export default class Controller {
         this.updateView();
         break;
       case "ArrowDown":
+        event.preventDefault();
+
         this.stopTimer();
         this.game.movePieceDown();
         this.updateView();
