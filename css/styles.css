@@ -1,120 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;
   min-width: 320px;
   height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
   min-height: 100vh;
   background-color: #222;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  color: #eee;
+  background-image: url("../shape.svg");
+  background-size: 50% auto;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  padding: 100px 10px;
+}
+
+.wrapper {
+  display: block;
+  margin-left: 14.4792%;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 500;
+  letter-spacing: 35.33px;
+  line-height: 55px;
   text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  margin-bottom: 15px;
 }
 
-.content span {
-  width: 30px;
-  display: inline-block;
+p {
+  font-size: 26px;
+  margin-bottom: 12.037%;
 }
 
-.portfolio {
-  margin-top: 30px;
-}
-
-.portfolio ul {
+.portfolio_item,
+.portfolio_item ul {
   display: flex;
-  justify-content: center;
-  align-items: start;
+}
+
+.portfolio_item {
+  margin-bottom: 5.5556%;
+}
+
+.portfolio_item:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  width: 215px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 40px;
+}
+
+h2 span {
+  font-size: 65px;
+  font-weight: 500;
+  margin-right: 14px;
+}
+
+ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.portfolio ul li {
-  margin-right: 25px;
-  transform: translateX(100vw);
+li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
-.portfolio ul li.active:nth-child(1) {
-   animation: fly-in 1.5s ease 0ms 1 normal forwards;
-}
-
-.portfolio ul li.active:nth-child(2) {
-   animation: fly-in 1.5s ease 200ms 1 normal forwards;
-}
-
-.portfolio ul li.active:nth-child(3) {
-   animation: fly-in 1.5s ease 450ms 1 normal forwards;
-}
-
-.portfolio ul li.active:nth-child(4) {
-   animation: fly-in 1.5s ease 800ms 1 normal forwards;
-}
-
-.portfolio ul li.active:nth-child(5) {
-   animation: fly-in 1.5s ease 1200ms 1 normal forwards;
-}
-
-.portfolio ul li.active:nth-child(6) {
-  animation: fly-in 1.5s ease 1650ms 1 normal forwards;
-}
-
-.portfolio ul li:last-child {
-  margin-right: 0;
-}
-
-.portfolio ul a {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: #eee;
+a {
+  color: #fff;
   text-decoration: none;
 }
 
-@keyframes fly-in {
-  0% { transform: translateX(100vw); }
-  50% { transform: translateX(-40px); }
-  100% { transform: translateX(0); }
-}
-
-@media screen and (max-width: 575px) {
-  .content {
-    font-size: 16px;
+@media screen and (max-width: 1320px) {
+  h1 {
+    font-size: 36px;
+    line-height: 1.4;
   }
 
-  .content span {
-    width: 14px;
+  p {
+    font-size: 22px;
+    margin-bottom: 8%;
+  }
+
+  h2 {
+    width: 200px;
+    font-size: 18px;
+    margin-right: 30px;
+  }
+
+  h2 span {
+    font-size: 42px;
+    margin-right: 14px;
+  }
+
+  .portfolio_item {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .content {
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    margin-left: 0;
+    text-align: center;
   }
 
   .portfolio {
-    margin-top: 40px;
-  }
-
-  .portfolio ul {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
-  .portfolio ul li {
-    margin-top: 15px;
+
+  h2 {
     margin-right: 0;
   }
 
-  .portfolio ul a {
-    font-size: 12px;
+  .portfolio_item,
+  .portfolio_item ul {
+    flex-direction: column;
+    width: 200px;
+  }
+
+  li {
+    margin-right: 0;
+  }
+
+  a {
+    display: block;
+    width: 200px;
+    text-align: left;
   }
 }
 
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 22px;
+    letter-spacing: 15px;
+  }
 
+  p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  h2 span {
+    font-size: 26px;
+    margin-right: 8px;
+  }
+
+  a {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
