@@ -93,9 +93,14 @@ a {
 }
 
 @media screen and (max-width: 1320px) {
+  .content {
+    background-image: none;
+  }
+
   h1 {
     font-size: 36px;
-    line-height: 1.4;
+    line-height: 1.2;
+    letter-spacing: 20px;
   }
 
   p {
@@ -119,22 +124,14 @@ a {
   }
 }
 
-@media screen and (max-width: 1320px) {
-  .content {
-    background-image: none;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .wrapper {
     margin-left: 0;
-    text-align: center;
   }
 
   .portfolio {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   h2 {
@@ -155,6 +152,7 @@ a {
     display: block;
     width: 200px;
     text-align: left;
+    padding: 10px 0;
   }
 }
 
@@ -180,6 +178,5 @@ a {
 
   a {
     font-size: 14px;
-    padding: 10px 0;
   }
 }

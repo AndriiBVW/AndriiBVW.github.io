@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1051.051" height="917.025" viewBox="0 0 1051.051 917.025"><defs><style>.a{fill:none;stroke:#fafafa;stroke-miterlimit:10;stroke-width:47px;}</style></defs><g transform="translate(-153.442 675.946) rotate(-54)"><circle class="a" cx="148.39" cy="148.39" r="148.39" transform="translate(596.527 273.102)"/><line class="a" x2="487.567" transform="translate(744.917 569.882)"/><line class="a" x2="830.947" transform="translate(-82.497 273.102)"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 931.97 777.84">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g id="shape">
+        <g id="Line_2" data-name="Line 2">
+          <path d="M735.33,270.66a158.5,158.5,0,0,0-64.1-147.22c-69.7-50.63-167.22-36.02-219.13,32.2-.66.87-1.32,1.76-1.97,2.65l-.25.35L0,777.84H24.72L420.79,232.71a159.486,159.486,0,0,0,.9,43.65,158.483,158.483,0,0,0,156.1,133.65,160.456,160.456,0,0,0,25.12-1.99,157.364,157.364,0,0,0,103.36-63.34L931.97,34.03V0ZM599.78,388.27a138.393,138.393,0,0,1-133.71-217.9l.21-.28c44.88-61.61,131.51-75.28,193.19-30.47,61.74,44.86,75.47,131.57,30.62,193.31A137.5,137.5,0,0,1,599.78,388.27Z" style="fill: #fafafa"/>
+          <path d="M452.1,155.64c-.66.87-1.32,1.76-1.97,2.65l1.94-2.67Z" style="fill: #fafafa"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
